@@ -18,6 +18,9 @@
 #define GENESIS_TIMESTAMP 1537578000
 #define GENESIS_DATA_LEN 16
 
+#define BLOCK_GENERATION_INTERVAL 1
+#define DIFFICULTY_ADJUSTMENT_INTERVAL 5
+
 /**
  * struct block_data_s - Block data
  *
