@@ -18,6 +18,22 @@ static int verify_genesis_block(block_t const *block)
 }
 
 /**
+* verify_transactions - verify each transaction
+* @node: current node
+* @idx: index of @node
+* @all_unspent: list of unspent transactions
+* Return: 0 if transaction is valid, 1 otherwise
+*/
+int verify_transactions(llist_node_t node, unsigned int idx, void *all_unspent)
+{
+	if (idx == 0)
+		return (0);
+	if (!transaction_is_valid(node, all_unspent))
+		return (1);
+	return (0);
+}
+
+/**
 * verify_blocks - a function that verifies that a Block is valid
 * @block: block to be verified
 * @prev_block: previous block
